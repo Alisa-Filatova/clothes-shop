@@ -669,10 +669,10 @@ fieldset {
   border-bottom: 1px solid #c4c4c4;
   flex-basis: 28%;
 }
-.language-nav__items {
+.language-nav__item {
   position: relative;
 }
-.language-nav__items::after {
+.language-nav__item::after {
   content: '';
   width: 2px;
   height: 8px;
@@ -682,7 +682,7 @@ fieldset {
   left: 44%;
   transform: rotate(-44deg);
 }
-.language-nav__items::before {
+.language-nav__item::before {
   content: '';
   width: 2px;
   height: 8px;
@@ -770,6 +770,9 @@ fieldset {
 }
 .search__field:focus {
   border-bottom: 1px solid #c4c4c4;
+}
+.search__icon {
+  cursor: pointer;
 }
 .card {
   display: flex;
@@ -1356,6 +1359,9 @@ fieldset {
   font-size: 21px;
   line-height: 40px;
   color: #b3a67e;
+}
+.catalog-item__price_currency {
+  font-size: 18px;
 }
 .catalog-item__price_popular {
   font-size: 30px;

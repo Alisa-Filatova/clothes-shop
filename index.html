@@ -11,6 +11,7 @@
 <body>
     <header class="header">
         <div class="header__wrapper">
+            
             <nav class="language-nav">
                 <ul class="language-nav__items">
                     <li class="language-nav__item">
@@ -27,10 +28,14 @@
             <nav class="user-block">
                 <ul class="user-operations">
                     <li class="user-operations__btn">
-                        <a class="user-operations__btn_enter" href="#">Вход</a>
+                        <a class="user-operations__btn_enter" href="#">
+                            Вход
+                        </a>
                     </li>
                     <li class="user-operations__btn">
-                        <a class="user-operations__btn_registration" href="#">Регистрация</a>
+                        <a class="user-operations__btn_registration" href="#">
+                            Регистрация
+                        </a>
                     </li>
                     <li class="user-operations__btn"> 
                         <img 
@@ -44,13 +49,26 @@
                 <div class="modal-window modal-window_enter hide">
                     <form name="enter" class="form form_enter">
                         <div class="form__title-wrapper">
-                            <a class="form__title form__title_active" href="#" id="enter-active">Вход</a>
-                            <a class="form__title" href="#" id="registration-disabled">Регистрация</a>
+                            <a 
+                                class="form__title form__title_active" 
+                                href="#" 
+                                id="enter-active"
+                            >
+                                Вход
+                            </a>
+                            <a 
+                                class="form__title" 
+                                href="#" 
+                                id="registration-disabled"
+                            >
+                                Регистрация
+                            </a>
                         </div>
                         <fieldset class="form__fieldset">
                             <label for="email">
                                 <input 
-                                    id="email" class="input-text form__input-text" 
+                                    id="email" 
+                                    class="input-text form__input-text" 
                                     type="email" 
                                     placeholder="E-mail"
                                     name="email"
@@ -59,7 +77,8 @@
                             </label>
                             <label for="password">
                                 <input 
-                                    id="password" class="input-text form__input-text" 
+                                    id="password" 
+                                    class="input-text form__input-text" 
                                     type="password" 
                                     placeholder="Введите пароль"
                                     name="password"
@@ -67,7 +86,12 @@
                                     required
                                 >
                             </label>
-                            <a class="form__link_help form__link" href="#">Забыли пароль?</a>
+                            <a 
+                                class="form__link_help form__link" 
+                                href="#"
+                            >
+                                Забыли пароль?
+                            </a>
                         </fieldset>
                         <input 
                             class="btn form__btn" 
@@ -75,14 +99,21 @@
                             value="Войти"
                         >
                     </form>
+                    
                     <footer class="form__footer">
                         <h3 class="form__footer-title">Войти через соцсети</h3>
                         <ul class="social-items form__social-items">
                             <li class="social-item">
-                                <a class="social-item__link social-item__link_vk" href="#"></a>
+                                <a 
+                                    class="social-item__link social-item__link_vk" 
+                                    href="#"
+                                ></a>
                             </li>
                             <li class="social-item">
-                                <a class="social-item__link social-item__link_facebook" href="#"></a>
+                                <a 
+                                    class="social-item__link social-item__link_facebook" 
+                                    href="#"
+                                ></a>
                             </li>
                         </ul>
                     </footer>
@@ -91,8 +122,20 @@
                 <div class="modal-window modal-window_registration hide">
                     <form name="registration" class="form form_registration">
                         <div class="form__title-wrapper">
-                            <a class="form__title" href="#" id="enter-disabled">Вход</a>
-                            <a class="form__title form__title_active" href="#" id="registration-active">Регистрация</a>
+                            <a 
+                                class="form__title" 
+                                href="#" 
+                                id="enter-disabled"
+                            >
+                                Вход
+                            </a>
+                            <a 
+                                class="form__title form__title_active"
+                                href="#" 
+                                id="registration-active"
+                            >
+                                Регистрация
+                            </a>
                         </div>
                         <fieldset class="form__fieldset">
                             <label for="user-name">
@@ -130,58 +173,106 @@
                             value="Войти"
                         >
                     </form>
+                    
                     <footer class="form__footer">
                         <h3 class="form__footer-title">Войти через соцсети</h3>
                         <ul class="social-items form__social-items">
                             <li class="social-item">
-                                <a class="social-item__link social-item__link_vk" href="#"></a>
+                                <a 
+                                    class="social-item__link social-item__link_vk" 
+                                    href="#"
+                                ></a>
                             </li>
                             <li class="social-item">
-                                <a class="social-item__link social-item__link_facebook" href="#"></a>
+                                <a 
+                                    class="social-item__link social-item__link_facebook" 
+                                    href="#"
+                                ></a>
                             </li>
                         </ul>
                     </footer>
                 </div>
+                
                 <div class="overlay hide"></div>
+                
                 <div class="user-block__wrapper">
-                    <div class="search">
-                        <input class="search__field" type="search" name="search">
-                        <img class="card__icon" src="img/search-icon.svg" width="23" height="25">
-                    </div>
+                    <label for="search" class="search">
+                        <input 
+                            class="search__field" 
+                            type="search" 
+                            name="search"
+                            id="search"
+                        >
+                        <img 
+                            class="search__icon" 
+                            src="img/search-icon.svg" 
+                            width="23" 
+                            height="25"
+                        >
+                    </label>
 
                     <a class="card" id="card" href="#">
-                        <img class="card__icon" src="img/bag-icon.svg" width="20" height="22">
+                        <img 
+                            class="card__icon" 
+                            src="img/bag-icon.svg" 
+                            width="20" 
+                            height="22"
+                            alt="card"
+                        >
                         <span class="card__items-count">2</span>
                     </a>
+
                     <section class="card-items hide">
                         <ul class="card-items__list">
                             <li class="card-item">
-                                <img class="card-item__photo" src="img/item-cart1.jpg" alt="item1">
+                                <img 
+                                    class="card-item__photo" 
+                                    src="img/item-cart1.jpg" 
+                                    alt="item1"
+                                >
                                 <div class="card-item__text">
                                     <h3 class="card-item__title">Свитер</h3>
                                     <p class="card-item__description">
                                         Состав: кашемир 80%<br> шелк 20%
                                     </p>
-                                    <span class="card-item__price catalog-item__price">65 000 р</span>
+                                    <span class="card-item__price catalog-item__price">
+                                        65 000 
+                                        <span class="catalog-item__price_currency">р</span>
+                                    </span>
                                 </div>
                                 
-                                <button class="close-btn card-item__btn-delete"></button>
+                                <button 
+                                    type="button" 
+                                    class="close-btn card-item__btn-delete"
+                                ></button>
                             </li>
                             <li class="card-item">
-                                <img class="card-item__photo" src="img/item-cart2.jpg" alt="item1">
+                                <img 
+                                    class="card-item__photo" 
+                                    src="img/item-cart2.jpg" 
+                                    alt="item1"
+                                >
                                 <div class="card-item__text">
                                     <h3 class="card-item__title">Платье</h3>
                                     <p class="card-item__description">
                                         Состав: кашемир 80%<br> шелк 20%
                                     </p>
-                                    <span class="card-item__price catalog-item__price">85 000 р</span>
+                                    <span class="card-item__price catalog-item__price">
+                                        85 000
+                                        <span class="catalog-item__price_currency">р</span>
+                                    </span>
                                 </div>
                                 
-                                <button class="close-btn card-item__btn-delete"></button>
+                                <button 
+                                    type="btn" 
+                                    class="close-btn card-item__btn-delete"
+                                ></button>
                             </li>
                         </ul>
                         <div class="card-items__btn-wrapper">
-                            <a class="btn card-items__btn" href="#">В корзину</a>
+                            <a class="btn card-items__btn" href="#">
+                                В корзину
+                            </a>
                         </div>
                     </section>
                 </div>
@@ -191,22 +282,48 @@
         <nav class="main-nav">
             <ul class="main-nav__menu">
                 <li class="main-nav__menu-item">
-                    <a class="main-nav__menu-item_link" id="catalog-btn" href="#">Каталог</a>
+                    <a 
+                        class="main-nav__menu-item_link" 
+                        id="catalog-btn" 
+                        href="#"
+                    >
+                        Каталог
+                    </a>
                 </li>
                 <li class="main-nav__menu-item">
-                    <a class="main-nav__menu-item_link" href="#">О нас</a>
+                    <a 
+                        class="main-nav__menu-item_link"
+                        href="#"
+                    >
+                        О нас
+                    </a>
                 </li>
                 <li class="main-nav__menu-item">
-                    <a class="main-nav__menu-item_link" href="#">Блог</a>
+                    <a 
+                        class="main-nav__menu-item_link" 
+                        href="#"
+                    >
+                        Блог
+                    </a>
                 </li>
             </ul>
 
             <ul class="main-nav__menu">
                 <li class="main-nav__menu-item">
-                    <a class="main-nav__menu-item_link" href="#">Доставка и оплата</a>
+                    <a 
+                        class="main-nav__menu-item_link" 
+                        href="#"
+                    >
+                        Доставка и оплата
+                    </a>
                 </li>
                 <li class="main-nav__menu-item">
-                    <a class="main-nav__menu-item_link" href="#">Контакты</a>
+                    <a 
+                        class="main-nav__menu-item_link" 
+                        href="#"
+                    >
+                        Контакты
+                    </a>
                 </li>
             </ul>
         </nav>
@@ -219,7 +336,7 @@
                 <li class="main-nav__catalog-item">
                     <a class="main-nav__link" href="#">Костюмы</a>
                 </li>
-                <li class="main-nav__catalog-item main-nav__catalog-item_active">
+                <li class="main-nav__catalog-item">
                     <a class="main-nav__link" href="#">Платья</a>
                 </li>
                 <li class="main-nav__catalog-item">
@@ -247,43 +364,87 @@
 
             <div class="catalog__items">
                 <div class="catalog-item" width="220">
-                    <img class="catalog-item__photo" src="img/coat.jpg" alt="coat">
-                    <img class="catalog-item__photo catalog-item__photo_hover" src="img/coat-hover.jpg" alt="coat">
+                    <img 
+                        class="catalog-item__photo" 
+                        src="img/coat.jpg" 
+                        alt="coat"
+                    >
+                    <img 
+                        class="catalog-item__photo catalog-item__photo_hover" 
+                        src="img/coat-hover.jpg" 
+                        alt="coat"
+                    >
                     <div class="catalog-item__description">
                         <h3 class="catalog-item__title">Пальто</h3>
                         <p class="catalog-item__material">Состав: шёлк/шифон</p>
                     </div>
-                    <span class="catalog-item__price">65 000 р</span>
+                     <span class="catalog-item__price">
+                        65 000 
+                        <span class="catalog-item__price_currency">р</span>
+                    </span>
                 </div>
 
                 <div class="catalog-item" width="220">
-                    <img class="catalog-item__photo" src="img/sweater-hover.jpg" alt="sweater">
-                    <img class="catalog-item__photo catalog-item__photo_hover" src="img/sweater.jpg" alt="sweater">
+                    <img 
+                        class="catalog-item__photo" 
+                        src="img/sweater-hover.jpg" 
+                        alt="sweater"
+                    >
+                    <img 
+                        class="catalog-item__photo catalog-item__photo_hover" 
+                        src="img/sweater.jpg" 
+                        alt="sweater"
+                    >
                     <div class="catalog-item__description">
                         <h3 class="catalog-item__title">Свитер</h3>
                         <p class="catalog-item__material">Состав: шёлк/шифон</p>
                     </div>
-                    <span class="catalog-item__price">20 000 р</span>
+                    <span class="catalog-item__price">
+                        20 000 
+                        <span class="catalog-item__price_currency">р</span>
+                    </span>
                 </div>
 
                 <div class="catalog-item" width="220">
-                    <img class="catalog-item__photo" src="img/hat.jpg" alt="hat">
-                    <img class="catalog-item__photo catalog-item__photo_hover" src="img/hat-hover.jpg" alt="hat">
+                    <img 
+                        class="catalog-item__photo" 
+                        src="img/hat.jpg" 
+                        alt="hat"
+                    >
+                    <img 
+                        class="catalog-item__photo catalog-item__photo_hover" 
+                        src="img/hat-hover.jpg" 
+                        alt="hat"
+                    >
                     <div class="catalog-item__description">
                         <h3 class="catalog-item__title">Шапка</h3>
                         <p class="catalog-item__material">Состав: шёлк/шифон</p>
                     </div>
-                    <span class="catalog-item__price">20 000 р</span>
+                    <span class="catalog-item__price">
+                        20 000 
+                        <span class="catalog-item__price_currency">р</span>
+                    </span>
                 </div>
 
                 <div class="catalog-item"width="220">
-                    <img class="catalog-item__photo" src="img/blouse.jpg" alt="blouse">
-                    <img class="catalog-item__photo catalog-item__photo_hover" src="img/blouse-hover.jpg" alt="blouse">
+                    <img 
+                        class="catalog-item__photo" 
+                        src="img/blouse.jpg" 
+                        alt="blouse"
+                    >
+                    <img 
+                        class="catalog-item__photo catalog-item__photo_hover" 
+                        src="img/blouse-hover.jpg" 
+                        alt="blouse"
+                    >
                     <div class="catalog-item__description">
                         <h3 class="catalog-item__title">Блузка</h3>
                         <p class="catalog-item__material">Состав: шёлк/шифон</p>
                     </div>
-                    <span class="catalog-item__price">20 000 р</span>
+                    <span class="catalog-item__price">
+                        20 000 
+                        <span class="catalog-item__price_currency">р</span>
+                    </span>
                 </div>
             </div>
         </section>
@@ -315,7 +476,12 @@
                         и теплый шарм летнего бриза в своем образе. 
                         Смотрите ноябрьский lookbook 
                     </p>
-                    <a class="promo__btn main-btn" href="#">Lookbook november 17</a>
+                    <a 
+                        class="promo__btn main-btn" 
+                        href="#"
+                    >
+                        Lookbook november 17
+                    </a>
                 </div>
             </div>
         </div>
@@ -326,12 +492,18 @@
             <div class="lookbook__items">
                 <div class="lookbook-item">
                     <div class="lookbook-item__photo-box">
-                        <img class="lookbook-item__photo" src="img/skirt.jpg" alt="skirt">
+                        <img 
+                            class="lookbook-item__photo" 
+                            src="img/skirt.jpg" 
+                            alt="skirt"
+                        >
                     </div>
                     <span class="lookbook-item__sign">lookbook 17</span>
                     <div class="lookbook-item__description">
                         <h3 class="lookbook-item__title">Юбка</h3>
-                        <p class="lookbook-item__material">Состав: шёлк/шифон</p>
+                        <p class="lookbook-item__material">
+                            Состав: шёлк/шифон
+                        </p>
                     </div>
                 </div>
 
@@ -349,23 +521,35 @@
 
                 <div class="lookbook-item">
                         <div class="lookbook-item__photo-box">
-                            <img class="lookbook-item__photo" src="img/dress.jpg" alt="dress">
+                            <img 
+                                class="lookbook-item__photo" 
+                                src="img/dress.jpg" 
+                                alt="dress"
+                            >
                         </div>
                     <span class="lookbook-item__sign">lookbook 17</span>
                     <div class="lookbook-item__description">
                         <h3 class="lookbook-item__title">Платье</h3>
-                        <p class="lookbook-item__material">Состав: шёлк/шифон</p>
+                        <p class="lookbook-item__material">
+                            Состав: шёлк/шифон
+                        </p>
                     </div>
                 </div>
 
                 <div class="lookbook-item">
                     <div class="lookbook-item__photo-box">
-                        <img class="lookbook-item__photo" src="img/shirt.jpg" alt="shirt">
+                        <img 
+                            class="lookbook-item__photo" 
+                            src="img/shirt.jpg" 
+                            alt="shirt"
+                        >
                     </div>
                     <span class="lookbook-item__sign">lookbook 17</span>
                     <div class="lookbook-item__description">
                         <h3 class="lookbook-item__title">Рубашка</h3>
-                        <p class="lookbook-item__material">Состав: шёлк/шифон</p>
+                        <p class="lookbook-item__material">
+                            Состав: шёлк/шифон
+                        </p>
                     </div>
                 </div>
             </div>
@@ -393,43 +577,103 @@
             <h2 class="popular__title">Популярные товары</h2>
             <div class="popular__items">
                 <div class="catalog-item catalog-item_popular" width="338" height="455">
-                    <img class="catalog-item__photo catalog-item__photo_popular" src="img/coat.jpg" alt="coat">
-                    <img class="catalog-item__photo catalog-item__photo_popular catalog-item__photo_hover" src="img/coat-hover.jpg" alt="coat">
+                    <img 
+                        class="catalog-item__photo catalog-item__photo_popular" 
+                        src="img/coat.jpg" 
+                        alt="coat"
+                    >
+                    <img 
+                        class="catalog-item__photo catalog-item__photo_popular catalog-item__photo_hover" 
+                        src="img/coat-hover.jpg" 
+                        alt="coat"
+                    >
                     <div class="catalog-item__description">
-                        <h3 class="catalog-item__title catalog-item__title_popular">Пальто</h3>
-                        <p class="catalog-item__material catalog-item__material_popular">Состав: шёлк/шифон</p>
+                        <h3 class="catalog-item__title catalog-item__title_popular">
+                            Пальто
+                        </h3>
+                        <p class="catalog-item__material catalog-item__material_popular">
+                            Состав: шёлк/шифон
+                        </p>
                     </div>
-                    <span class="catalog-item__price catalog-item__price_popular">65 000 р</span>
+                    <span class="catalog-item__price catalog-item__price_popular">
+                        65 000 
+                        <span class="catalog-item__price_currency">р</span>
+                    </span>
                 </div>
 
                 <div class="catalog-item catalog-item_popular" width="338" height="455">
-                    <img class="catalog-item__photo catalog-item__photo_popular" src="img/sweater-hover.jpg" alt="sweater">
-                    <img class="catalog-item__photo catalog-item__photo_popular catalog-item__photo_hover" src="img/sweater.jpg" alt="sweater">
+                    <img 
+                        class="catalog-item__photo catalog-item__photo_popular" 
+                        src="img/sweater-hover.jpg" 
+                        alt="sweater"
+                    >
+                    <img 
+                        class="catalog-item__photo catalog-item__photo_popular catalog-item__photo_hover" 
+                        src="img/sweater.jpg" 
+                        alt="sweater"
+                    >
                     <div class="catalog-item__description">
-                        <h3 class="catalog-item__title catalog-item__title_popular">Свитер</h3>
-                        <p class="catalog-item__material catalog-item__material_popular">Состав: шёлк/шифон</p>
+                        <h3 class="catalog-item__title catalog-item__title_popular">
+                            Свитер
+                        </h3>
+                        <p class="catalog-item__material catalog-item__material_popular">
+                            Состав: шёлк/шифон
+                        </p>
                     </div>
-                    <span class="catalog-item__price catalog-item__price_popular">20 000 р</span>
+                    <span class="catalog-item__price catalog-item__price_popular">
+                        20 000 
+                        <span class="catalog-item__price_currency">р</span>
+                    </span>
                 </div>
 
                 <div class="catalog-item catalog-item_popular" width="338" height="455">
-                    <img class="catalog-item__photo catalog-item__photo_popular" src="img/hat.jpg" alt="hat">
-                    <img class="catalog-item__photo catalog-item__photo_popular catalog-item__photo_hover" src="img/hat-hover.jpg" alt="hat">
+                    <img 
+                        class="catalog-item__photo catalog-item__photo_popular" 
+                        src="img/hat.jpg" 
+                        alt="hat"
+                    >
+                    <img 
+                        class="catalog-item__photo catalog-item__photo_popular catalog-item__photo_hover" 
+                        src="img/hat-hover.jpg" 
+                        alt="hat"
+                    >
                     <div class="catalog-item__description">
-                        <h3 class="catalog-item__title catalog-item__title_popular">Шапка</h3>
-                        <p class="catalog-item__material catalog-item__material_popular">Состав: шёлк/шифон</p>
+                        <h3 class="catalog-item__title catalog-item__title_popular">
+                            Шапка
+                        </h3>
+                        <p class="catalog-item__material catalog-item__material_popular">
+                            Состав: шёлк/шифон
+                        </p>
                     </div>
-                    <span class="catalog-item__price catalog-item__price_popular">20 000 р</span>
+                    <span class="catalog-item__price catalog-item__price_popular">
+                        20 000 
+                        <span class="catalog-item__price_currency">р</span>
+                    </span>
                 </div>
 
                 <div class="catalog-item catalog-item_popular" width="338" height="455">
-                    <img class="catalog-item__photo catalog-item__photo_popular" src="img/blouse.jpg" alt="blouse">
-                    <img class="catalog-item__photo catalog-item__photo_popular catalog-item__photo_hover" src="img/blouse-hover.jpg" alt="blouse">
+                    <img 
+                        class="catalog-item__photo catalog-item__photo_popular" 
+                        src="img/blouse.jpg" 
+                        alt="blouse"
+                    >
+                    <img 
+                        class="catalog-item__photo catalog-item__photo_popular catalog-item__photo_hover" 
+                        src="img/blouse-hover.jpg" 
+                        alt="blouse"
+                    >
                     <div class="catalog-item__description">
-                        <h3 class="catalog-item__title catalog-item__title_popular">Блузка</h3>
-                        <p class="catalog-item__material catalog-item__material_popular">Состав: шёлк/шифон</p>
+                        <h3 class="catalog-item__title catalog-item__title_popular">
+                            Блузка
+                        </h3>
+                        <p class="catalog-item__material catalog-item__material_popular">
+                            Состав: шёлк/шифон
+                        </p>
                     </div>
-                    <span class="catalog-item__price catalog-item__price_popular">20 000 р</span>
+                     <span class="catalog-item__price catalog-item__price_popular">
+                        20 000 
+                        <span class="catalog-item__price_currency">р</span>
+                    </span>
                 </div>
             </div>
         </section>
@@ -511,18 +755,28 @@
                 
                 <ul class="social-items">
                     <li class="social-item">
-                        <a class="social-item__link social-item__link_vk" href="#"></a>
+                        <a 
+                            class="social-item__link social-item__link_vk" 
+                            href="#"
+                        ></a>
                     </li>
                     <li class="social-item">
-                        <a class="social-item__link social-item__link_facebook" href="#"></a>
+                        <a 
+                            class="social-item__link social-item__link_facebook" 
+                            href="#"
+                        ></a>
                     </li>
                     <li class="social-item">
-                        <a class="social-item__link social-item__link_instagram" href="#"></a>
+                        <a 
+                            class="social-item__link social-item__link_instagram" 
+                            href="#"
+                        ></a>
                     </li>
                 </ul>
             </section>
         </nav>
     </footer>
+
     <script src="dist/js/index.js"></script>
 </body>
 </html>
