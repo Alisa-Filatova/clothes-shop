@@ -1,0 +1,39 @@
+@import '../../global/variables';
+
+.close-btn {
+    border: none;
+    background-color: transparent;
+    position: relative;
+    outline: none;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 17px;
+        height: 3px;
+        background-color: @baige;
+        position: absolute;
+        top: 9px;
+        left: 5px;
+        transform: rotate(45deg);
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        width: 17px;
+        height: 3px;
+        background-color: @baige;
+        position: absolute;
+        top: 9px;
+        left: 5px;
+        transform: rotate(134deg);
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+}

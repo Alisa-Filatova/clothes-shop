@@ -1,0 +1,78 @@
+@import '../global/variables';
+@import '../global/mixins';
+
+.catalog-item {
+    overflow: hidden;
+    position: relative;
+    width: 220px;
+    max-height: 400px;
+    z-index: 600;
+    background-color: @white;
+
+    &_popular {
+        width: auto;
+        max-width: 338px;
+        max-height: 573px;
+        background-color: @main-background-color;
+    }
+
+    &__photo {
+        z-index: 100;
+        transition: opacity 0.3s linear;
+        width: inherit;
+        height: auto;
+        border: 1px solid @grey-line-color;
+
+        &_popular {
+            max-width: 338px;
+            max-height: 573px;
+            border: none;
+        }
+        
+        &_hover {
+            z-index: 200;
+            display: block;
+            position: absolute;
+            top: 0;
+            opacity: 0;
+        }
+    }
+
+    &:hover &__photo_hover {
+       opacity: 1;
+    }
+
+    &__material {
+        margin: 0;
+        font-size: 14px;
+        line-height: 22px;
+
+        &_popular {
+            font-size: 18px;
+        }
+    }
+
+    &__price {
+        font-size: 21px;
+        line-height: 40px;
+        color: @baige;
+
+        &_popular {
+            font-size: 30px;
+        }
+    }
+    &__description {
+        z-index: 300;
+    }
+
+    &__title {
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: bold;
+
+        &_popular {
+            font-size: 24px;
+            margin: 15px auto 10px;
+        }
+    }
+}

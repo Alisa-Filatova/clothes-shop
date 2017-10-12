@@ -1,0 +1,17 @@
+@import '../global/mixins';
+
+.popular {
+    .container();
+    padding-top: 65px;
+    padding-bottom: 70px;
+
+    &__items {
+        .flex-wrapper(row, space-between, nowrap);
+        width: 100%;
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 75px;
+    }
+}

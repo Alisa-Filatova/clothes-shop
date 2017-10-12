@@ -1,0 +1,39 @@
+@import '../global/variables';
+@import '../global/mixins';
+
+.about {
+    background: url('../../img/signature.png') no-repeat 1035px center;
+    background-size: contain;
+    padding-top: 50px;
+    
+    &__wrapper {
+        .container();
+        .flex-wrapper(row, space-between, nowrap);
+        align-items: center;
+    }
+
+    &__photo {
+        width: 834px;
+        height: 540px;
+        background: url('../../img/about-photo.jpg') no-repeat top center;
+        background-size: 130%;
+        transform: translateX(-16%);
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 280px;
+            height: 4px;
+            position: absolute;
+            right: -26%;
+            top: 13%;
+            background: @btn-color-hover;
+            z-index: 500;
+        }
+    }
+
+    &__text {
+        flex-basis: 52%;
+        margin-left: 30px;
+    }
+}

@@ -1,0 +1,33 @@
+@import '../../global/variables';
+@import '../../global/mixins';
+
+.paginator {
+    .flex-wrapper(column, space-between, nowrap);
+    position: absolute;
+    bottom: 18%;
+    right: 3%;
+    padding-left: 0;
+    list-style: none;
+    text-align: center;
+    z-index: 300;
+    height: 115px;
+    width: auto;
+
+    &__item {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin: 1px;
+        background-color: fade(@white, 50%);
+        border-radius: 10px;
+        cursor: pointer;
+
+        &_active, &:active {
+            background-color: @white;
+        }
+
+        &:hover {
+            background-color: fade(@white, 70%); 
+        }
+    }
+}

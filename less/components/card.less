@@ -1,0 +1,23 @@
+@import '../global/variables';
+@import '../global/mixins';
+
+.card {
+    .flex-wrapper(row, center, nowrap); 
+    align-items: center;
+    padding: 20px;
+    border: 2px solid @beige-light;
+    width: 100px;
+    height: 53px;
+    font-size: 24px;
+    line-height: 24px;
+    border-radius: 45px;
+    transition: 0.2s linear;
+
+    &__icon {
+        margin-right: 5px;
+    }
+
+    &:hover, &:active, &_active {
+        border-color: @card-border-color;
+    }
+}

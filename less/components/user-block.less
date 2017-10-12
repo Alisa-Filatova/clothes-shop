@@ -1,0 +1,44 @@
+@import '../global/variables';
+@import '../global/mixins';
+
+.user-block {
+    .flex-wrapper(column, flex-start, wrap);
+    border-bottom: 1px solid @grey-line-color;
+    flex-basis: 28%;  
+    position: relative;
+
+    &__wrapper {
+        .flex-wrapper(row, flex-end, nowrap);
+        margin: 22px 0;
+    }
+}
+
+.user-operations {
+    .flex-wrapper(row, flex-end, nowrap);
+    align-items: center;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 15px;
+
+    &__btn {
+        margin-left: 10px;
+        
+        &_enter, &_registration {
+            color: @font-main-nav-color;
+            transition: color 0.1s linear;
+
+            &:hover, &:active, &-active {
+                color: @font-base-color;
+            }
+        }
+    } 
+
+    & li:first-child::after {
+        content: '/';
+        margin-right: 3px;
+    }
+
+    & li:nth-child(2) {
+        margin-left: 0;
+    }
+}

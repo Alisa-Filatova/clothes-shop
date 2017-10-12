@@ -1,0 +1,21 @@
+@import '../../global/variables';
+@import '../../global/mixins';
+
+.search {
+    .flex-wrapper(row, flex-end, nowrap);
+    align-items: center;
+    margin-right: 23px;
+    
+    &__field {
+        width: 230px;
+        height: 33px;
+        font-size: 18px;
+        border: 1px solid transparent;
+        outline: none;
+        padding: 0;
+
+        &:focus {
+            border-bottom: 1px solid @grey-line-color;
+        }
+    }
+}

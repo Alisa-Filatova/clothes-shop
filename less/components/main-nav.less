@@ -1,0 +1,57 @@
+@import '../global/variables';
+@import '../global/mixins';
+
+.main-nav {
+    .flex-wrapper(row, space-between, nowrap);
+    font-size: 21px;
+    line-height: 31px;
+
+    &__menu {
+        .flex-wrapper(row, space-between, nowrap);
+        flex-basis: 22%;
+        padding: 45px 0;
+    }
+
+    &__menu-item {
+        &_link {
+            color: @font-main-nav-color;
+            transition: 0.1s linear;
+
+            &:hover, &:active, &-active {
+                color: @font-base-color;
+            }
+        }
+    }
+
+    &__menu:last-child {
+        flex-basis: 24%;
+    }
+
+    &__catalog {
+        line-height: 40px;
+    }
+
+    &__link {
+        position: relative;
+        
+        &::before {
+            content: '';
+            width: 0;
+            height: 2px;
+            position: absolute;
+            right: -85px;
+            top: 48%;
+            background: @btn-color;
+            z-index: 500;
+            transition: 0.4s linear;
+        }
+
+        &:hover {
+            font-weight: bold;
+        }
+
+        &:hover::before {
+            width: 65px;
+        }
+    }
+}

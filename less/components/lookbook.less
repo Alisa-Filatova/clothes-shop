@@ -1,0 +1,79 @@
+@import '../global/variables';
+@import '../global/mixins';
+
+.lookbook {
+    .container();
+    padding-top: 50px;
+
+    &__items {
+        .flex-wrapper(row, space-between, wrap);
+        position: relative;
+
+        & .lookbook-item:last-child {
+            margin-left: auto;
+            margin-right: 238px;
+            margin-top: -178px;
+        }
+    }
+
+    &__article {
+        flex-basis: 20%;
+        align-self: center;
+        margin-bottom: 208px;
+    }
+}
+
+.lookbook-item {
+    height: auto;
+    width: auto;
+    position: relative;
+
+    &:hover &__description::before {
+        width: 358px;
+    }
+
+    &__photo-box {
+        height: auto;
+        width: auto;
+        overflow: hidden;
+    }
+
+    &__photo {
+        transition: 0.8s linear;
+
+        &:hover {
+            transform: scale(1.5);
+        }
+    }
+
+    &__material {
+        margin: 0;
+    }
+
+    &__sign {
+        color: @baige;
+        position: absolute;
+        top: 106px;
+        left: -84px;
+        transform: rotate(270deg);
+    }
+
+    &__description {
+        position: relative;
+        z-index: 400;
+        background: @main-background-color;
+        width: 100%;
+
+        &::before {
+            content: '';
+            width: 176px;
+            height: 4px;
+            position: absolute;
+            left: -12%;
+            top: -81%;
+            background: @btn-color-hover;
+            z-index: 500;
+            transition: 0.6s linear;
+        }
+    }
+}

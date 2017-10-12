@@ -1,0 +1,69 @@
+@import 'variables';
+@import 'mixins';
+
+* {
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    font-family: @base-font;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 30px;
+    color: @font-base-color;
+    background-color: @white;
+    text-align: left;
+    min-width: 320px;
+    margin: 0 auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    color: @font-heading-color;
+    margin: 0;
+}
+
+h1 {
+    font-size: 61.13px;
+    line-height: 83.36px;
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 40px;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: @font-base-color;
+}
+
+main {
+    background-color: @main-background-color;
+}
+
+fieldset {
+    border: none;
+}
+
+.hide {
+    display: none !important;
+}

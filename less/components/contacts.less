@@ -1,0 +1,14 @@
+@import '../global/variables';
+@import '../global/mixins';
+
+.contacts {
+    &__subscribe {
+        .flex-wrapper(column, flex-end, wrap);
+        align-content: space-between;
+    }
+
+    &__email {
+        margin-bottom: 26px;
+        color: @white;
+    }
+}

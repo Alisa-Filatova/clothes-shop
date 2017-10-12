@@ -1,0 +1,71 @@
+@import '../global/variables';
+@import '../global/mixins';
+
+.card-items {
+    position: absolute;
+    top: 146px;
+    right: 0;
+    .flex-wrapper(column, space-between, wrap); 
+    align-items: flex-end;
+    background-color: @white;
+    padding: 30px;
+    padding-bottom: 50px;
+    padding-top: 0;
+    z-index: 2000;
+
+    &__btn-wrapper {
+        align-self: center;
+        margin-top: 38px;
+    }
+
+    &__btn {
+        display: inline-block;
+        text-align: center;
+        line-height: 18px;
+        background-color: @baige;
+        color: @white;
+        width: 220px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        height: auto;
+        border: none;
+
+        &:hover {
+            background-color: @card-border-color;
+            border: none;
+        }
+    }
+}
+
+.card-item {
+    .flex-wrapper(row, flex-start, nowrap); 
+    background-color: @white;
+    border-bottom: 1px solid @grey-line-color;
+    padding: 35px 0;
+    width: 514px;
+    position: relative;
+
+    &__btn-delete {
+        position: absolute;
+        right: 21px;
+        top: 45%;
+    }
+
+    &__description {
+        margin: 0;
+    }
+
+    &__photo {
+        flex-shrink: 0;
+    }
+
+    &__text {
+        flex-shrink: 0;
+        margin-left: 35px;
+    }
+
+    &__price {
+        font-size: 30px;
+        line-height: 46px;
+    }
+}

@@ -1,0 +1,14 @@
+@import '../global/variables';
+@import '../global/mixins';
+
+.catalog {
+    .flex-wrapper(row, space-between, wrap);
+    z-index: 500;
+    background-color: @white;
+    padding-bottom: 45px;
+    
+    &__items {
+        .flex-wrapper(row, space-between, wrap);
+        flex-basis: 66%;
+    }
+}

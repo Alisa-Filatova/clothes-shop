@@ -1,0 +1,83 @@
+@import '../global/variables';
+@import '../global/mixins';
+
+.form {
+    .flex-wrapper(column, center, wrap);
+    align-items: center;
+    padding: 70px 173px 60px;
+
+    &__title-wrapper {
+        font-size: 30px;
+        line-height: 60px;
+        margin-bottom: 35px;
+    }
+
+    &__fieldset {
+        .flex-wrapper(column, center, wrap);
+    }
+
+    &__title {
+        font-size: 30px;
+        line-height: 60px;
+        color: fade(@font-main-nav-color, 70%);
+
+        &_active, &:active {
+            color: @font-base-color;
+        }
+
+        &:first-child::after {
+            content: '/';
+            font-size: 30px;
+            margin-left: 5px;
+        }
+    }
+
+    &__footer {
+        .flex-wrapper(column, center, wrap);
+        align-items: center;
+        background-color: @btn-color-hover;
+        padding: 50px 250px 55px;
+    }
+
+    &__footer-title {
+        font-size: 18px;
+        line-height: 30px;
+        font-weight: normal;
+    }
+
+    &__input-text {
+        margin-bottom: 15px;
+    }
+
+    &__link {
+        font-size: 14px;
+        line-height: 14px;
+        color: @grey;
+        margin-bottom: 30px;
+    }
+
+    &__social-items {
+        flex-shrink: 0;
+        margin: 0;
+        width: 47%;
+        margin-top: 20px;
+    }
+
+    &__btn {
+        width: 220px;
+        background-color: @baige;
+        color: @white;
+        border: none;
+        padding: 15px 25px;
+
+        &:hover {
+            background-color: @card-border-color;
+            border: none;
+        }
+    }
+
+    &_registration {
+        padding-top: 60px;
+        padding-bottom: 35px;
+    }
+}

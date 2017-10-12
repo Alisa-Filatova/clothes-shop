@@ -1,0 +1,79 @@
+@import 'variables';
+
+.container() {
+    max-width: @container_desktop;
+    padding: 0 20px;
+    margin: 0 auto;
+
+    @media (max-width: @screen_laptop) {
+        max-width: @container_laptop;
+        width: 100%;
+        padding: 0 90px;
+    }
+
+    @media (max-width: @screen_tablet) {
+        max-width: @container_tablet;
+        width: 100%;
+        padding: 0 30px;
+    }
+
+    @media (max-width: @screen_mobile) {
+        min-width: @container_mobile;
+        width: 100%;
+        padding: 0;
+    }
+}
+
+.alignment(@position, @width) {
+    position: @position;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    width: @width;
+    margin-left: -(@width / 2);
+}
+
+.transition(@property, @time, @type) {
+    -webkit-transition: @property  @time  @type;
+    -moz-transition: @property  @time  @type;
+    -o-transition: @property  @time  @type;
+    transition: @property  @time  @type;
+}
+
+.flex-wrapper(@direction, @justyfy-content, @wrap) {
+    display: flex;
+    flex-flow: @direction @wrap;
+    justify-content: @justyfy-content;
+}
+
+.triangle(@_; @size; @color) {
+    width: 0;
+    height: 0;
+    border-width: @size;
+    border-style: solid;
+    border-color: @color;
+}
+
+.triangle(top; @size; @color) {
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-top-style: none;
+}
+
+.triangle(right; @size; @color) {
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-right-style: none;
+}
+
+.triangle(bottom; @size; @color) {
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-bottom-style: none;
+}
+
+.triangle(left; @size; @color) {
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-left-style: none;
+}

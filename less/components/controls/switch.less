@@ -1,0 +1,47 @@
+@import '../../global/variables';
+@import '../../global/mixins';
+
+.switch {
+    display: flex;
+    z-index: 300;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.switch-btn {
+    width: 79px;
+    height: 76px;
+    background-color: @switch-btn-color;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+    transition: 0.2s linear;
+
+    &:hover {
+        background-color: @switch-btn-color-hover;
+    }
+
+    &_right {
+        &::after {
+            .triangle(right; 7px; @grey);
+            content: '';
+            display: inline-block;
+            position: absolute;
+            top: 45%;
+            right: 40%;
+        }
+    }
+
+    &_left {
+        &::after {
+            .triangle(left; 7px; @grey);
+            content: '';
+            display: inline-block;
+            position: absolute;
+            top: 45%;
+            right: 47%;
+        }
+    }
+}

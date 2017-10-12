@@ -1,0 +1,50 @@
+@import '../global/variables';
+
+.language-nav {
+    border-bottom: 1px solid @grey-line-color;  
+    flex-basis: 28%;  
+
+    &__items {
+        position: relative;
+        
+        &::after {
+            content: '';
+            width: 2px;
+            height: 8px;
+            background-color: @grey;
+            position: absolute;
+            top: 16%;
+            left: 44%;
+            transform: rotate(-44deg);
+        }
+
+        &::before {
+            content: '';
+            width: 2px;
+            height: 8px;
+            background-color: @grey;
+            position: absolute;
+            top: 16%;
+            left: 45.2%;
+            transform: rotate(44deg);
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        padding-right: 70px;
+        padding-bottom: 27px;
+    }
+
+    &__icon { 
+        display: inline-block;
+        width: 28px;
+        height: 20px;
+        margin-right: 18px;
+
+        &_rus {
+            background: url('../../img/rus.png') no-repeat center;
+            background-size: contain;
+        }
+    }
+}

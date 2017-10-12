@@ -1,0 +1,24 @@
+@import '../../global/variables';
+@import '../../global/mixins';
+
+.btn {
+    width: 300px;
+    height: auto; 
+    padding: 23px 25px;
+    background-color: @btn-color;
+    font-family: @base-font;
+    border: 1px solid @btn-color;
+    cursor: pointer;
+    transition: 0.1s linear;
+    color: @font-base-color;
+    font-family: @base-font;
+    font-size: 18px;
+    line-height: 18px;
+    .transition(all, 0.1s, linear);
+
+    &:hover, &:active {
+        background-color: @btn-color-hover;
+        color: @white;
+        border: 1px solid @btn-color-hover;
+    }
+}

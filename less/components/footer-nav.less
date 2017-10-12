@@ -1,0 +1,39 @@
+@import '../global/variables';
+@import '../global/mixins';
+
+.footer-nav {
+    .container();
+    .flex-wrapper(row, space-between, wrap);
+
+    &__link {
+        color: @white;
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 0;
+            height: 2px;
+            position: absolute;
+            left: -75px;
+            top: 48%;
+            background: @btn-color;
+            z-index: 500;
+            transition: 0.4s linear;
+        }
+
+        &:hover {
+            font-weight: bold;
+        }
+
+        &:hover::before {
+            width: 65px;
+        }
+    }
+    &__catalog {
+        flex-basis: 12%;
+    }
+
+    &__menu-item {
+        flex-basis: 25%;
+    }
+}
