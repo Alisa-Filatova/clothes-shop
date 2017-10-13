@@ -8,10 +8,51 @@
     &__items {
         .flex-wrapper(row, space-between, nowrap);
         width: 100%;
-    }
 
+        & .catalog-item_popular:last-child {
+            margin-right: 0;
+        }
+    }
+    
     &__title {
         text-align: center;
         margin-bottom: 75px;
+    }
+}
+
+
+@media (max-width: @screen_laptop) {
+    .popular {
+        padding-bottom: 50px;
+
+        &__title {
+            margin: 40px 0;
+        }
+    }
+}
+
+@media (max-width: @screen_tablet) {
+    .popular {
+
+        &__title {
+            font-size: 24px;
+            margin-top: 13px;
+        }
+
+        &__items {
+            & .catalog-item_popular:last-child {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: @screen_mobile) {
+    .popular {
+        padding-bottom: 25px;
+        
+        &__items {
+            .flex-wrapper(row, center, wrap);
+        }
     }
 }

@@ -16,10 +16,54 @@
 
         &:focus {
             border-bottom: 1px solid @grey-line-color;
+            fill: @font-base-color;
         }
     }
 
     &__icon {
         cursor: pointer;
+
+        &:hover &_color {
+            fill: @font-base-color; 
+        }
+
+        &_color-focus {
+            fill: @font-base-color;
+        }
     }
 }
+
+@media (max-width: @screen_laptop) {
+    .search {
+        &__field {
+            width: 178px;
+        }
+
+        &__icon {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+@media (max-width: @screen_tablet) {
+    .search {
+        &__field {
+            width: 154px;
+        }
+
+        &__icon {
+            width: 16px;
+            height: 15px;
+        }
+    }
+}
+
+@media (max-width: @screen_mobile) {
+    .search {
+        &__field { 
+            background-color: #f4f4f4;
+        }
+    }
+}
+

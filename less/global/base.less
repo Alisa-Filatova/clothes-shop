@@ -67,3 +67,57 @@ fieldset {
 .hide {
     display: none !important;
 }
+
+@media (max-width: @screen_laptop) {
+    body {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 27px; 
+        line-height: 33px;
+    }
+
+    h3 {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: @screen_tablet) {
+    h1 {
+        font-size: 40px;
+        line-height: 52px;
+    }
+
+    h2 {
+        font-size: 21px;
+        line-height: 24px;
+    }
+
+    h3 {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+@media (max-width: @screen_mobile) {
+    h1 {
+        font-size: 23px;
+        line-height: 31px;
+    }
+
+    h2 {
+        font-size: 21px;
+        line-height: 24px;
+    }
+
+    h3 {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}

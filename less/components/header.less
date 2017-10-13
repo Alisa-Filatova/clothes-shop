@@ -16,3 +16,26 @@
         flex-basis: 28%;  
     }
 }
+
+@media (max-width: @screen_laptop) {
+    .header {
+        &__title {
+            transform: translateY(24px);            
+        }
+    }
+}
+
+@media (max-width: @screen_mobile) {
+    .header {
+        &__wrapper {
+            flex-wrap: wrap; 
+            justify-content: space-around;         
+        }
+
+        &__title {
+            order: -1;
+            flex-basis: 72%;
+            text-align: left;
+        }
+    }
+}

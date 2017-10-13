@@ -6,6 +6,7 @@
     overflow: hidden;
     z-index: 2000;
     background-color: @white;
+    animation: fade-in 0.3s linear;
 
     &__wrapper {
         display: flex;
@@ -14,5 +15,18 @@
         align-items: center;
         margin-bottom: 10px;
         text-align: left;
+    }
+}
+
+
+@media (max-width: @screen_laptop) {
+    .modal-window {
+        .alignment(fixed, @modal-window-width-laptop);
+    }
+}
+
+@media (max-width: @screen_tablet) {
+    .modal-window {
+        .alignment(fixed, @modal-window-width-tablet);
     }
 }

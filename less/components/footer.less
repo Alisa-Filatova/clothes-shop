@@ -18,3 +18,37 @@
         }
     }
 }
+
+@media (max-width: @screen_laptop) {
+    .footer {
+        line-height: 36px;
+        padding-top: 40px;
+        padding-bottom: 45px;
+
+        &__btn {
+            font-size: 16px;
+            width: 263px;
+        }
+    }
+}
+
+@media (max-width: @screen_tablet) {
+    .footer {
+        padding-bottom: 20px;
+
+        &__btn {
+            width: 240px;
+            padding: 17px 25px;
+        }
+    }
+}
+
+
+@media (max-width: @screen_mobile) {
+    .footer {
+
+        &__btn {
+            width: 100%;
+        }
+    }
+}

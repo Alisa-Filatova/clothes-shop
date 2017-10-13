@@ -35,3 +35,48 @@
         }
     }
 }
+
+@media (max-width: @screen_laptop) {
+    .social-item {
+        width: 30px;
+        height: 30px;
+
+        &__link {
+            width: 30px;
+            height: 30px;
+
+            &_vk {
+                background-position: 0;
+            }
+
+            &_instagram {
+                background-position: -81px;
+            }
+        }
+    }
+}
+
+@media (max-width: @screen_tablet) {
+    .social-item {
+        width: 25px;
+        height: 25px;
+
+        &__link {
+            width: 25px;
+            height: 25px;
+
+            &_vk {
+                background-position: 1px;
+            }
+
+            &_instagram {
+                background-position: -64px;
+            }
+        }
+    }
+
+    .social-items {
+        max-width: 41%;
+        margin-top: 38px;
+    }
+}

@@ -45,3 +45,43 @@
         }
     }
 }
+
+@media (max-width: @screen_laptop) {
+    .switch {
+        right: 7%;
+    }
+    .switch-btn {
+        width: 56px;
+        height: 56px;
+
+        &_right {
+            &::after {
+                .triangle(right; 6px; @grey);
+                
+            }
+        }
+    
+        &_left {
+            &::after {
+                .triangle(left; 6px; @grey);
+        
+            }
+        }
+    }
+}
+
+@media (max-width: @screen_tablet) {
+    .switch {
+        right: 5%;
+    }
+    .switch-btn {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: @screen_mobile) {
+    .switch {
+        display: none;
+    }
+}

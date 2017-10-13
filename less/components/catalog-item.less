@@ -4,7 +4,7 @@
 .catalog-item {
     overflow: hidden;
     position: relative;
-    width: 220px;
+    max-width: 220px;
     max-height: 400px;
     z-index: 600;
     background-color: @white;
@@ -14,6 +14,7 @@
         max-width: 338px;
         max-height: 573px;
         background-color: @main-background-color;
+        margin-right: 15px;
     }
 
     &__photo {
@@ -22,6 +23,8 @@
         width: inherit;
         height: auto;
         border: 1px solid @grey-line-color;
+        position: relative;
+        width: 100%;
 
         &_popular {
             max-width: 338px;
@@ -77,6 +80,98 @@
         &_popular {
             font-size: 24px;
             margin: 15px auto 10px;
+        }
+    }
+}
+
+@media (max-width: @screen_laptop) {
+    .catalog-item {
+        max-width: 263px;
+        max-height: 480px;
+
+        &__title {
+            font-size: 21px;
+            margin-top: 20px;
+
+            &_popular {
+                font-size: 18px;
+                line-height: 30px;
+                margin: 0;
+            }
+        }
+
+        &__material {
+            font-size: 16px;
+
+            &_popular {
+                font-size: 14px;
+                line-height: 24px;
+                margin: 0;
+            }
+        }
+        &__price {
+            font-size: 24px;
+            line-height: 34px;
+        }
+    }
+
+    .catalog {
+        &__items .catalog-item:last-child {
+           display: none;
+        }
+
+        &__items {
+            flex-basis: 75%;
+        }
+    }
+}
+
+@media (max-width: @screen_tablet) {
+    .catalog-item {
+        max-width: 225px;
+
+        &_popular {
+            margin: 0;
+            max-width: 300px;
+            max-height: 525px;
+        }
+
+        &__title {
+            font-size: 18px;
+            margin-top: 10px;
+
+            &_popular {
+                font-size: 21px;
+                margin-top: 5px;
+            }
+        }
+
+        &__material {
+            font-size: 14px;
+
+            &_popular {
+                font-size: 16px;
+            }
+        }
+
+        &__price {
+            font-size: 21px;
+
+            &_currency {
+                font-size: 18px;
+            }
+
+            &_popular {
+                font-size: 27px;
+            }
+        }
+    }
+}
+
+@media (max-width: @screen_tablet) {
+    .catalog-item {
+        &_popular {
+            margin-bottom: 20px;
         }
     }
 }

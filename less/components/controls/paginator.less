@@ -31,3 +31,36 @@
         }
     }
 }
+
+@media (max-width: @screen_laptop) {
+
+    .paginator {
+        right: 9%;
+        height: 102px;
+        
+
+        &__item {
+            width: 9px;
+            height: 9px;
+        }
+    }
+}
+
+@media (max-width: @screen_tablet) {
+    
+    .paginator {
+        right: 8%;
+        height: 90px;
+
+        &__item {
+            width: 8px;
+            height: 8px;
+        }
+    } 
+}
+
+@media (max-width: @screen_mobile) {
+    .paginator {
+        display: none;
+    }
+}

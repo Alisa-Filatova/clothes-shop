@@ -21,3 +21,34 @@
         border-color: @card-border-color;
     }
 }
+
+@media (max-width: @screen_laptop) {
+    .card {
+        width: 80px;
+        height: 43px;
+        font-size: 18px;
+        line-height: 18px;
+        border: 1px solid @beige-light;
+
+        &__icon {
+            width: 17px;
+            height: 18px;
+        }
+    }
+}
+
+@media (max-width: @screen_tablet) {
+    .card {
+        width: 68px;
+        height: 36px;
+        border-radius: 25px;
+        padding: 10px 30px;
+        font-size: 16px;
+        line-height: 16px;
+
+        &__icon {
+            width: 13px;
+            height: 15px;
+        }
+    }
+}

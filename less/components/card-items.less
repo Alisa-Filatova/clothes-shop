@@ -12,6 +12,7 @@
     padding-bottom: 50px;
     padding-top: 0;
     z-index: 2000;
+    animation: fade-in 0.4s linear;
 
     &__btn-wrapper {
         align-self: center;
@@ -67,5 +68,83 @@
     &__price {
         font-size: 30px;
         line-height: 46px;
+    }
+}
+
+@media (max-width: @screen_laptop) {
+    .card-item {
+        width: 390px;
+        padding-bottom: 10px;
+        
+        &__description {
+            line-height: 22px;
+        }
+
+        &__price {
+            font-size: 24px;
+
+            &_currency {
+                font-size: 14px;
+            }
+        }
+
+        &__photo {
+            width: 90px;
+            height: 129px;
+        }
+    }
+}
+
+@media (max-width: @screen_laptop) {
+    .card-items {
+
+        &__btn {
+            width: 170px;
+            font-size: 14px;
+            line-height: 24px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
+}
+
+@media (max-width: @screen_tablet) {
+    .card-items {
+        padding: 20px; 
+        padding-bottom: 40px;
+        padding-top: 0;
+        top: 129px;
+    }
+
+    &__btn {
+        width: 148px;
+    }
+
+    &__btn-wrapper {
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: @screen_tablet) {
+    .card-item {
+        width: 350px;
+
+        &__description {
+            font-size: 12px;
+            line-height: 19px;
+        }
+
+        &__price {
+            font-size: 20px;
+
+            &_currency {
+                font-size: 12px;
+            }
+        }
+
+        &__photo {
+            width: 89px;
+            height: 114px;
+        }
     }
 }

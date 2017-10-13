@@ -16,8 +16,8 @@
         font-size: 72px;
         line-height: 72px;
         padding: 32px 106px;
-        transform: translateX(-22%);
         padding-left: 240px;
+        transform: translateX(-22%);
         position: relative;
         transition: color 0.2s linear;
 
@@ -52,5 +52,63 @@
         line-height: 36px;
         margin-top: 150px;
         margin-bottom: 140px;
+    }
+}
+
+@media (max-width: @screen_laptop) {
+    .promo {
+        background: url('../../img/slide1-laptop.jpg') no-repeat center;
+        height: 605px;
+
+        &__text {
+            line-height: 30px;
+            max-width: 184px;
+            margin-top: 105px;
+            margin-bottom: 74px;
+        }
+
+        &__btn {
+            font-size: 53px;
+            line-height: 53px;
+            padding: 30px 77px;
+            padding-left: 90px;
+            transform: translateX(-13%);            
+        }
+    }
+}
+
+@media (max-width: @screen_tablet) {
+    .promo {
+        background: url('../../img/slide1-tablet.jpg') no-repeat center;
+        height: 530px;
+
+        &__text {
+            line-height: 24px;
+        }
+
+        &__btn {
+            padding-top: 25px;
+            padding-bottom: 25px;
+            font-size: 48px;
+            line-height: 48px;
+        }
+    }
+}
+
+@media (max-width: @screen_mobile) {
+    .promo {
+        background: url('../../img/slide1-mobile.jpg') no-repeat center;
+        height: 405px;
+
+        &__text {
+            display: none;
+        }
+
+        &__btn {
+            font-size: 40px;
+            line-height: 40px;
+            transform: none;
+            padding: 20px 10px;
+        }
     }
 }

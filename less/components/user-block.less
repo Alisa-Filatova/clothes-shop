@@ -11,6 +11,15 @@
         .flex-wrapper(row, flex-end, nowrap);
         margin: 22px 0;
     }
+
+    &__icon {
+        transform: translateY(7px);
+        margin-left: 5px;
+
+        &_color-focus {
+            fill: @card-border-color;
+        }
+    }
 }
 
 .user-operations {
@@ -22,23 +31,51 @@
 
     &__btn {
         margin-left: 10px;
-        
-        &_enter, &_registration {
-            color: @font-main-nav-color;
-            transition: color 0.1s linear;
+        color: @font-main-nav-color;
+        transition: color 0.1s linear;
 
-            &:hover, &:active, &-active {
-                color: @font-base-color;
-            }
+        &:hover, &:active, &-active {
+            color: @font-base-color;
         }
-    } 
 
-    & li:first-child::after {
-        content: '/';
-        margin-right: 3px;
+        &:hover .user-block__icon_color {
+            fill: @card-border-color;
+        }
+
+    } 
+}
+
+@media (max-width: @screen_laptop) {
+    .user-block {
+        &__icon {
+            width: 16px;
+            height: 19px;
+            transform: translateY(4px);
+        }
     }
 
-    & li:nth-child(2) {
-        margin-left: 0;
+    .user-operations {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: @screen_mobile) {
+    .user-block {
+        .flex-wrapper(row, space-between, nowrap);
+        background-color: #f4f4f4;
+        border: none;
+
+        &__wrapper {
+            margin: 0;
+            align-items: center;
+        }
+    }
+
+    .user-operations {
+        font-size: 14px;
+
+        &__btn {
+            display: none;
+        }
     }
 }

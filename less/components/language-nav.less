@@ -4,6 +4,10 @@
     border-bottom: 1px solid @grey-line-color;  
     flex-basis: 28%;  
 
+    &_mobile {
+        display: none;
+    }
+
     &__item {
         position: relative;
         
@@ -38,13 +42,86 @@
 
     &__icon { 
         display: inline-block;
-        width: 28px;
+        width: 29px;
         height: 20px;
         margin-right: 18px;
+        margin-bottom: -4px;
+        background-size: contain;
 
         &_rus {
-            background: url('../../img/rus.png') no-repeat center;
+            background: url('../../img/rus.png') no-repeat;
+        }
+
+        &_en {
+            background: url('../../img/english.jpg') no-repeat;
+        }
+    }
+}
+
+@media (max-width: @screen_laptop) {
+    .language-nav {
+    
+        &__item {
+           
+            &::after {
+                height: 6px;
+                left: 44.5%;
+                transform: rotate(-44deg);
+            }
+    
+            &::before {
+                height: 6px;
+                left: 45.7%;
+                transform: rotate(39deg);
+            }
+        }
+    
+        &__link {
+            display: inline-block;
+            padding-right: 70px;
+            padding-bottom: 27px;
+        }
+    
+        &__icon { 
+            margin-right: 10px;
+        }
+    }
+}
+
+@media (max-width: @screen_tablet) {
+    .language-nav {
+        &__link {
+            padding-bottom: 20px;
+        }
+
+        &__icon { 
+            width: 20px;
+            height: 15px;
             background-size: contain;
+        }
+
+        &__item::after {
+            top: 22%;
+        }
+
+        &__item::before {
+            top: 22%;
+        }
+    }
+}
+
+@media (max-width: @screen_mobile) {
+    .language-nav {
+        display: none;
+        
+        &_mobile {
+            display: block;
+            border: none;
+            padding-right: 0;
+        }
+        
+        &__link {
+            padding-right: 0;
         }
     }
 }

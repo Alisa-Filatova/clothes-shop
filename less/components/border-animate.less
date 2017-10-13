@@ -1,0 +1,50 @@
+@import '../global/mixins';
+
+.border-animate {
+    border: 0;
+    // Using inset box-shadow instead of border for sizing simplicity
+    box-shadow: inset 0 0 0 3px transparent;
+    // Required, since we're setting absolute on pseudo-elements
+    position: absolute;
+    vertical-align: middle;
+    box-sizing: border-box;
+    z-index: 2000;
+    width: 88%;
+    height: 72%;
+    left: 6%;
+    top: 4%;
+    .center();
+  
+    &::before,
+    &::after {
+        box-sizing: inherit;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    &_small {
+        box-shadow: inset 0 0 0 2px transparent;
+        height: 68%;
+        top: 3%;
+    }
+}
+
+@media (max-width: @screen_laptop) {
+    .border-animate {
+        
+        &_small {
+            height: 72%;
+        }
+    }
+}
+
+@media (max-width: @screen_tablet) {
+    .border-animate {
+        
+        &_small {
+            height: 67%;
+        }
+    }
+}
