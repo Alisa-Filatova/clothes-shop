@@ -21,14 +21,18 @@
         position: relative;
         transition: color 0.2s linear;
 
-        &::after {
-            content: '';
-            display: inline-block;
-            .triangle(right; 10px; @grey);
-            position: absolute;
-            top: 45%;
-            right: 5%;
-            transition: 0.2s linear;
+        &_last {
+            position: relative;
+
+            &::after {
+                content: '';
+                display: inline-block;
+                .triangle(right; 10px; @grey);
+                position: absolute;
+                top: 45%;
+                right: -14%;
+                transition: 0.2s linear;
+            }
         }
 
         &:hover {
@@ -97,7 +101,6 @@
 
 @media (max-width: @screen_mobile) {
     .promo {
-        background: url('../../img/slide1-mobile.jpg') no-repeat center;
         height: 405px;
 
         &__text {
@@ -106,9 +109,38 @@
 
         &__btn {
             font-size: 40px;
-            line-height: 40px;
+            line-height: 50px;
             transform: none;
             padding: 20px 10px;
+            background-color: transparent;
+            padding-left: 0;
+
+            &_first,
+            &_last {
+                background-color: @btn-color-hover;
+                display: inline-block; 
+                padding: 10px 30px 10px 8px;
+            }
+
+            &_last {
+                padding-right: 50px;
+                
+                &::after {
+                    border-width: 6px;
+                    top: 45%;
+                    right: 8%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: @container_mobile) {
+    .promo {
+        background: url('../../img/slide1-mobile.jpg') no-repeat center;
+
+        &__btn {
+            margin-bottom: 40px;
         }
     }
 }

@@ -9,7 +9,45 @@
     animation: fade-in 0.4s linear;
     
     &__items {
-        .flex-wrapper(row, space-between, wrap);
+        .flex-wrapper(row, space-between, nowrap);
         flex-basis: 66%;
+
+        & .catalog-item:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+@media (max-width: @screen_laptop) {
+    .catalog {
+
+        &__items {
+
+            & .catalog-item:nth-child(3) {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: @screen_small_tablet) {
+    .catalog {
+        .flex-wrapper(row, center, wrap);
+
+        &__items {
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+    }
+}
+
+@media (max-width: @screen_mobile) {
+    .catalog {
+        text-align: center;
+
+        &__items {
+            .flex-wrapper(row, center, wrap);
+        }
     }
 }

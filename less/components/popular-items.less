@@ -47,6 +47,16 @@
     }
 }
 
+@media (max-width: @screen_small_tablet) {
+    .popular {
+        padding-bottom: 25px;
+        
+        &__items {
+            .flex-wrapper(row, space-around, wrap);
+        }
+    }
+}
+
 @media (max-width: @screen_mobile) {
     .popular {
         padding-bottom: 25px;

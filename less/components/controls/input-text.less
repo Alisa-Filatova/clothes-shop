@@ -9,6 +9,10 @@
     font-family: @base-font;
     border: 1px solid @grey-line-color;
     border-radius: 2px;
+
+    &:focus {
+        outline: 1px solid @black; 
+    }
 }
 
 @media (max-width: @screen_laptop) {
@@ -22,5 +26,6 @@
     .input-text {
         width: 240px;
         height: 51px;
+        padding: 15px 25px;
     }
 }

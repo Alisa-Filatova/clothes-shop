@@ -35,7 +35,7 @@ module.exports = {
             }, {
                 test: /\.svg\??.*$/,
                 loader: 'file-loader?name=svg/[hash].svg',
-            }
+            },
         ],
     },
     

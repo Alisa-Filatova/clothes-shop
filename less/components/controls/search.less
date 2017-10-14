@@ -50,6 +50,7 @@
     .search {
         &__field {
             width: 154px;
+            font-size: 14px;
         }
 
         &__icon {
@@ -59,10 +60,25 @@
     }
 }
 
+@media (max-width: @screen_small_tablet) {
+    .search {
+        margin-right: 10px;
+    }
+}
+
 @media (max-width: @screen_mobile) {
     .search {
+        margin-right: 0;
+        
         &__field { 
             background-color: #f4f4f4;
+            width: 112px;
+            font-size: 12px;
+        }
+
+        &__icon {
+            width: 12px;
+            height: 12px;
         }
     }
 }

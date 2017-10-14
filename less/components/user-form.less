@@ -47,6 +47,13 @@
 
     &__input-text {
         margin-bottom: 15px;
+        padding: 15px;
+
+        &_password {
+            font-size: 25px;
+            line-height: 25px;
+            color: gainsboro;
+        }
     }
 
     &__link {
@@ -142,6 +149,10 @@
         &__input-text {
             width: 230px;
             font-size: 12px;
+
+            &_password {
+                font-size: 25px;
+            }
         }
 
         &__link {
@@ -165,6 +176,37 @@
         &__social-items {
             width: 40%;
             margin-top: 3px;
+        }
+    }
+}
+
+@media (max-width: @screen_mobile) {
+    .form {
+        padding: 15px 20px;
+
+        &__title {
+            font-size: 20px;
+        }
+
+        &__title-wrapper {
+            margin-bottom: 15px;
+        }
+
+        &__input-text {
+            width: 100%;
+            font-size: 12px;
+
+            &_password {
+                font-size: 25px;
+            }
+        }
+
+        &__footer {
+            padding: 15px 78px;
+        }
+
+        &__fieldset {
+            width: 90%;
         }
     }
 }

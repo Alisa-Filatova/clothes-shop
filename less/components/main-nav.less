@@ -60,6 +60,14 @@
     .main-nav {
         font-size: 18px;
 
+        &__menu:last-child {
+            flex-basis: 29%;
+        }
+
+        &__menu:first-child {
+            flex-basis: 27%;
+        }
+
         &__menu { 
             padding: 30px 0; 
         }
@@ -78,17 +86,40 @@
     }
 }
 
-@media (max-width: @screen_mobile) {
+@media (max-width: @screen_small_tablet) {
     .main-nav {
         text-align: center;
-        
+        padding-top: 80px;
+        padding-bottom: 125px;
+        background-color: @white;
+        font-size: 14px;
         .flex-wrapper(column, center, nowrap);
         align-items: center;
-        line-height: 30px;
+        line-height: 34px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        width: 100%;
+        display: none;
 
         &__menu {
             .flex-wrapper(column, center, nowrap);
             padding: 0;
+        }
+
+        &__menu-item {
+            &_link {
+                padding: 10px;
+            }
+        }
+
+        &_open {
+            display: flex;
+        }
+
+        &__menu-open {
+            margin-right: 15px;
         }
     }
 }

@@ -6,22 +6,30 @@
     position: relative;
     height: 100%;
  
-     &__viewport {
-         .flex-wrapper(row, flex-start, nowrap);
-         align-items: center;
-         width: 100%;
-         max-height: 813px;
-     }
- 
-     &__slide-box {
-         width: 100%;
-         min-width: 320px;
-     }
- 
-     &__slide {
-         transition: all 1s ease-in-out;
-         width: 100%;
-         min-width: 320px;
-         z-index: 200;
-     }
- }
+    &__viewport {
+        .flex-wrapper(row, flex-start, nowrap);
+        align-items: center;
+        width: 100%;
+        max-height: 813px;
+    }
+
+    &__slide-box {
+        width: 100%;
+        min-width: 320px;
+    }
+
+    &__slide {
+        transition: all 1s ease-in-out;
+        width: 100%;
+        min-width: 320px;
+        z-index: 200;
+    }
+}
+
+
+@media (max-width: @screen_mobile) {
+    .slider {
+        display: flex;
+        flex-flow: column-reverse;
+    }
+}

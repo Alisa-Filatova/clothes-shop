@@ -4,7 +4,7 @@
 .modal-window {
     .alignment(fixed, @modal-window-width);
     overflow: hidden;
-    z-index: 2000;
+    z-index: 3000;
     background-color: @white;
     animation: fade-in 0.3s linear;
 
@@ -30,3 +30,11 @@
         .alignment(fixed, @modal-window-width-tablet);
     }
 }
+
+@media (max-width: @screen_mobile) {
+    .modal-window {
+        .alignment(fixed, @modal-window-width-mobile);
+        min-width: 304px;
+    }
+}
+

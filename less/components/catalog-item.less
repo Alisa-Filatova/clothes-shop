@@ -8,13 +8,13 @@
     max-height: 400px;
     z-index: 600;
     background-color: @white;
+    margin-right: 15px;
 
     &_popular {
         width: auto;
         max-width: 338px;
         max-height: 573px;
         background-color: @main-background-color;
-        margin-right: 15px;
     }
 
     &__photo {
@@ -131,7 +131,6 @@
         max-width: 225px;
 
         &_popular {
-            margin: 0;
             max-width: 300px;
             max-height: 525px;
         }
@@ -168,10 +167,11 @@
     }
 }
 
-@media (max-width: @screen_tablet) {
+@media (max-width: @screen_small_tablet) {
     .catalog-item {
         &_popular {
             margin-bottom: 20px;
+            margin-right: 0;
         }
     }
 }

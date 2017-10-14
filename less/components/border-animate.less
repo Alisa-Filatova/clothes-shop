@@ -10,7 +10,7 @@
     box-sizing: border-box;
     z-index: 2000;
     width: 88%;
-    height: 72%;
+    height: 69%;
     left: 6%;
     top: 4%;
     .center();
@@ -33,9 +33,10 @@
 
 @media (max-width: @screen_laptop) {
     .border-animate {
+        height: 70%;
         
         &_small {
-            height: 72%;
+            height: 68%;
         }
     }
 }
@@ -43,6 +44,15 @@
 @media (max-width: @screen_tablet) {
     .border-animate {
         
+        &_small {
+            height: 67%;
+        }
+    }
+}
+
+@media (max-width: @screen_small_tablet) {
+    .border-animate {
+
         &_small {
             height: 67%;
         }

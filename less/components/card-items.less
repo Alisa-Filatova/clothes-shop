@@ -148,3 +148,45 @@
         }
     }
 }
+
+@media (max-width: @screen_small_tablet) {
+    .card-items {
+        top: 71px;
+    }
+}
+
+
+@media (max-width: @screen_mobile) {
+    .card-items {
+        top: 59px;
+        left: 0;
+        width: 100%;
+        padding: 0 15px 60px;
+
+        &__list {
+            width: 100%;
+        }
+
+        &__btn {
+            width: 122px;
+            font-size: 10px;
+            line-height: 10px;
+        }
+
+        &__btn-wrapper {
+            margin-top: 20px;
+        }
+    }
+
+    .card-item {
+        width: 100%; 
+
+        &__text {
+            margin-left: 15px;
+        }
+
+        &__btn-delete {
+            right: 9px;
+        }
+    }
+}

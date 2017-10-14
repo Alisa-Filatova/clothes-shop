@@ -18,7 +18,7 @@
     }
 
     &:hover, &:active, &_active {
-        border-color: @card-border-color;
+        border-color: @baige;
     }
 }
 
@@ -33,6 +33,10 @@
         &__icon {
             width: 17px;
             height: 18px;
+        }
+
+        &:hover, &:active, &_active {
+            border: 2px solid @baige;
         }
     }
 }
@@ -49,6 +53,45 @@
         &__icon {
             width: 13px;
             height: 15px;
+        }
+    }
+}
+
+@media (max-width: @screen_mobile) {
+    .card {
+        width: 52px;
+        height: 25px;
+        font-size: 12px;
+        line-height: 12px;
+        padding: 12px 16px;
+
+        &__icon {
+            width: 11px;
+            height: 11px;
+        }
+    }
+
+    .card-item {
+        &__description {
+            font-size: 10px;
+            line-height: 12px;
+        }
+
+        &__title {
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        &__price {
+            font-size: 17px;
+
+            &_currency {
+                font-size: 12px;
+            }
+        }
+        
+        &__text {
+            margin-left: 16px;
         }
     }
 }

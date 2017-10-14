@@ -110,6 +110,14 @@
     }
 }
 
+
+@media (max-width: @screen_small_tablet) {
+    .language-nav {
+        flex-basis: 32%;
+        border: none;
+    }
+}
+
 @media (max-width: @screen_mobile) {
     .language-nav {
         display: none;
@@ -121,7 +129,31 @@
         }
         
         &__link {
-            padding-right: 0;
+            padding: 0;
+            padding-right: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            font-size: 12px;
+            line-height: 12px;
+        }
+
+        &__icon {
+            width: 15px;
+            height: 11px;
+            margin-bottom: -1px;
+        }
+
+        &__item::before {
+            left: 69.7%;
+            top: 5px;
+            width: 1px;
+        }
+
+        &__item::after {
+            left: 64.7%;
+            top: 5px;
+            width: 1px;
         }
     }
 }
