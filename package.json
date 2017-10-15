@@ -1,8 +1,8 @@
 {
-  "name": "closes-shop",
+  "name": "clothes-shop",
   "version": "1.0.0",
   "private": true,
-  "description": "test for Neotech",
+  "description": "Test task for Neotech",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
