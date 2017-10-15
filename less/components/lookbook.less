@@ -32,12 +32,7 @@
             }
 
             @media (max-width: @screen_small_tablet) {
-                margin-right: 0;
-                margin-top: -119px;            
-            }
-
-            @media (max-width: @screen_mobile) {
-                margin: 0; 
+                margin: 0;            
             }
         }
 
@@ -79,8 +74,12 @@
             margin: auto;            
         }
 
+        @media (max-width: @screen_small_tablet) {
+            justify-content: space-around;          
+        }
+
         @media (max-width: @screen_mobile) {
-            .flex-wrapper(row, center, wrap);
+            justify-content:  center;
         }
     }
 
@@ -100,6 +99,12 @@
             margin-bottom: 162px;
         }
 
+        @media (max-width: @screen_small_tablet) {
+            flex-basis: 40.5%;
+            flex-grow: 1;
+            margin-left: 20px;
+        }
+
         @media (max-width: @screen_mobile) {
             margin: 50px 0; 
             flex-basis: 84.5%;
@@ -111,7 +116,7 @@
                 font-size: 12px;
                 line-height: 18px;
                 max-width: 182px;
-            }   
+            }
 
             @media (max-width: @screen_mobile) {
                 max-width: 282px;
@@ -119,109 +124,3 @@
         }
     }
 }
-
-.lookbook-item {
-    height: auto;
-    width: auto;
-    position: relative;
-
-    &:hover &__description::before {
-        width: 358px;
-
-        @media (max-width: @screen_tablet) {
-            width: 200px;
-        }
-    }
-
-    &__photo-box {
-        height: auto;
-        width: auto;
-        overflow: hidden;
-    }
-
-    &__photo {
-        transition: 0.8s linear;
-        width: 100%;
-
-        &:hover {
-            transform: scale(1.5);
-        }
-    }
-
-    &__material {
-        margin: 0;
-
-        @media (max-width: @screen_mobile) {
-            font-size: 16px;
-        }
-    }
-
-    &__sign {
-        color: @baige;
-        position: absolute;
-        top: 106px;
-        left: -84px;
-        transform: rotate(270deg);
-
-        @media (max-width: @screen_laptop) {
-            left: -62px;   
-        }
-
-        @media (max-width: @screen_tablet) {
-            top: 43px;   
-            font-size: 14px;
-        }
-
-        @media (max-width: @screen_mobile) {
-            display: none;
-        }
-    }
-
-    &__description {
-        position: relative;
-        z-index: 400;
-        background: @main-background-color;
-        width: 100%;
-
-        &::before {
-            content: '';
-            width: 176px;
-            height: 4px;
-            position: absolute;
-            left: -12%;
-            top: -81%;
-            background: @btn-color-hover;
-            z-index: 500;
-            transition: 0.6s linear;
-
-            @media (max-width: @screen_laptop) {
-                height: 3px;
-                top: -66%;
-            }
-
-            @media (max-width: @screen_tablet) {
-                width: 89px;
-                top: -84%;
-                height: 2px;  
-                left: -14%;              
-            }
-        }
-    }
-
-    &__title {
-        
-        @media (max-width: @screen_laptop) {
-            line-height: 24px;          
-        }
-
-        @media (max-width: @screen_mobile) {
-           font-size: 18px;
-        }
-    }
-
-    @media (max-width: @screen_mobile) {
-        margin-bottom: 25px;
-    }
-}
-
-

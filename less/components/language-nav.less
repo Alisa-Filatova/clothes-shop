@@ -4,12 +4,26 @@
     border-bottom: 1px solid @grey-line-color;  
     flex-basis: 28%;  
 
+    &__item {
+        cursor: pointer;
+
+        &_en {
+            & .language-nav__switch {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
     &_mobile {
         display: none;
     }
 
-    &__item {
+    &__switch {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
         position: relative;
+        margin-left: 30px;
         
         &::after {
             content: '';
@@ -17,8 +31,8 @@
             height: 8px;
             background-color: @grey;
             position: absolute;
-            top: 16%;
-            left: 44%;
+            top: 2px;
+            left: 3px;
             transform: rotate(-44deg);
         }
 
@@ -28,15 +42,14 @@
             height: 8px;
             background-color: @grey;
             position: absolute;
-            top: 16%;
-            left: 45.2%;
+            top: 2px;
+            left: 7px;
             transform: rotate(44deg);
         }
     }
 
     &__link {
         display: inline-block;
-        padding-right: 70px;
         padding-bottom: 27px;
     }
 
@@ -61,27 +74,6 @@
 @media (max-width: @screen_laptop) {
     .language-nav {
     
-        &__item {
-           
-            &::after {
-                height: 6px;
-                left: 44.5%;
-                transform: rotate(-44deg);
-            }
-    
-            &::before {
-                height: 6px;
-                left: 45.7%;
-                transform: rotate(39deg);
-            }
-        }
-    
-        &__link {
-            display: inline-block;
-            padding-right: 70px;
-            padding-bottom: 27px;
-        }
-    
         &__icon { 
             margin-right: 10px;
         }
@@ -90,22 +82,33 @@
 
 @media (max-width: @screen_tablet) {
     .language-nav {
+
+        &__switch {
+            width: 10px;
+            height: 10px;
+           
+            &::after {
+                width: 1px;
+                height: 6px;
+                transform: rotate(-44deg);
+            }
+    
+            &::before {
+                width: 1px;
+                height: 6px;
+                transform: rotate(39deg);
+            }
+        }
+
         &__link {
             padding-bottom: 20px;
+            min-width: 130px;
         }
 
         &__icon { 
             width: 20px;
             height: 15px;
             background-size: contain;
-        }
-
-        &__item::after {
-            top: 22%;
-        }
-
-        &__item::before {
-            top: 22%;
         }
     }
 }
@@ -115,6 +118,7 @@
     .language-nav {
         flex-basis: 32%;
         border: none;
+        padding-left: 15px;
     }
 }
 
@@ -125,7 +129,12 @@
         &_mobile {
             display: block;
             border: none;
+            padding-left: 0;
             padding-right: 0;
+        }
+
+        &__switch {
+            margin-left: 15px;
         }
         
         &__link {
@@ -142,18 +151,6 @@
             width: 15px;
             height: 11px;
             margin-bottom: -1px;
-        }
-
-        &__item::before {
-            left: 69.7%;
-            top: 5px;
-            width: 1px;
-        }
-
-        &__item::after {
-            left: 64.7%;
-            top: 5px;
-            width: 1px;
         }
     }
 }

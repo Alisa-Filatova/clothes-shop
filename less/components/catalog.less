@@ -31,23 +31,7 @@
 }
 
 @media (max-width: @screen_small_tablet) {
-    .catalog {
-        .flex-wrapper(row, center, wrap);
-
-        &__items {
-            flex-direction: column;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-        }
-    }
-}
-
-@media (max-width: @screen_mobile) {
-    .catalog {
-        text-align: center;
-
-        &__items {
-            .flex-wrapper(row, center, wrap);
-        }
+    #catalog  {
+        display: none !important; 
     }
 }

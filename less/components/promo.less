@@ -39,7 +39,7 @@
             color: @orange;
         }
 
-        &:hover::after {
+        &:hover &_last::after {
             border-color: @orange;
             border-top-color: transparent;
             border-bottom-color: transparent;
@@ -76,15 +76,17 @@
             line-height: 53px;
             padding: 30px 77px;
             padding-left: 90px;
-            transform: translateX(-13%);            
+            transform: translateX(-13%); 
+            
+            &_last::after {
+                top: 37%;
+            }
         }
     }
 }
 
 @media (max-width: @screen_tablet) {
     .promo {
-        background: url('../../img/slide1-tablet.jpg') no-repeat center;
-        height: 530px;
 
         &__text {
             line-height: 24px;
@@ -95,6 +97,43 @@
             padding-bottom: 25px;
             font-size: 48px;
             line-height: 48px;
+
+            &_last::after {
+                border-width: 8px;
+            }
+        }
+    }
+}
+
+@media (max-width: @container_tablet) {
+    .promo {
+        background: url('../../img/slide1-tablet.jpg') no-repeat center;
+        height: 530px;
+    }
+}
+
+@media (max-width: @screen_small_tablet) {
+    .promo {
+
+        &__btn {
+            font-size: 40px;
+            line-height: 50px;
+
+            &_last {
+                white-space: nowrap;
+                
+                &::after {
+                    top: 38%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: @container_small_tablet) {
+    .promo {
+        &__text {
+            visibility: hidden;
         }
     }
 }
@@ -108,17 +147,17 @@
         }
 
         &__btn {
-            font-size: 40px;
-            line-height: 50px;
-            transform: none;
             padding: 20px 10px;
             background-color: transparent;
             padding-left: 0;
+            transform: none;
+            display: flex;
+            flex-flow: column wrap;
+            align-items: flex-start;
 
             &_first,
             &_last {
                 background-color: @btn-color-hover;
-                display: inline-block; 
                 padding: 10px 30px 10px 8px;
             }
 

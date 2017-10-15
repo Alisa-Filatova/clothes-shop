@@ -4,6 +4,29 @@
     .container();
     padding-top: 65px;
     padding-bottom: 70px;
+    position: relative;
+    
+    &::before {
+        content: '';
+        width: 40%;
+        height: 4px;
+        position: absolute;
+        right: 0;
+        top: 29%;
+        background: @btn-color-hover;
+        z-index: 5;
+    }
+
+    &::after {
+        content: '';
+        width: 40%;
+        height: 4px;
+        position: absolute;
+        left: 0;
+        top: 47%;
+        background: @btn-color-hover;
+        z-index: 5;
+    }
 
     &__items {
         .flex-wrapper(row, space-between, nowrap);
@@ -33,6 +56,14 @@
 
 @media (max-width: @screen_tablet) {
     .popular {
+
+        &::before {
+            display: none;
+        }
+    
+        &::after {
+            display: none;
+        }
 
         &__title {
             font-size: 24px;
