@@ -162,19 +162,16 @@ languageRus[0].addEventListener('click', function() {
 });
 
 languageEn[0].addEventListener('click', function() {
-
     this.classList.add('hide');
     languageRus[0].classList.remove('hide');
 });
 
 languageRus[1].addEventListener('click', function() {
-
     this.classList.add('hide');
     languageEn[1].classList.remove('hide');
 });
 
 languageEn[1].addEventListener('click', function() {
-
     this.classList.add('hide');
     languageRus[1].classList.remove('hide');
 });
